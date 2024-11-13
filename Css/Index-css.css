@@ -1,0 +1,112 @@
+/* Set the background color for the entire page */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the Hero Section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Hero Section Banner */
+.profile-photo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Center and limit width of Hero Text */
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Container to hold both Long Form and Short Form sections side by side */
+#content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+/* Style for Long and Short Form Sections */
+#long-form, #short-form {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+}
+
+/* Center the header above the content container */
+#long-form h3, #short-form h3 {
+    text-align: center;
+    margin: 0;
+    color: #00ffcc;
+    position: relative;
+    top: -60px; /* Moves the header slightly above the content */
+}
+
+/* Long Form Content Layout - Text on Left, Video on Right */
+#long-form .content-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Text on left, video on right */
+    gap: 10px;
+    width: 100%;
+}
+
+#long-form .text-container, #short-form .text-container {
+    padding: 10px;
+    margin: 0;
+}
+
+#long-form .video-container, #short-form .video-container {
+    padding: 10px;
+    margin: 0;
+}
+
+/* Make Videos Wider */
+.video-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* Short Form Content Layout - Video on Left, Text on Right */
+#short-form .content-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Video on left, text on right */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #content-wrapper {
+        flex-direction: column;
+    }
+
+    #long-form .content-card, #short-form .content-card {
+        grid-template-columns: 1fr; /* Stack text and video */
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+    }
+}
