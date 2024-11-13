@@ -8,44 +8,74 @@
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <section id="hero" style="background-image: url('background-image.jpg');">
+    <!-- Hero Section with Intro Video -->
+    <section id="hero">
         <div class="hero-content">
             <img src="Images/Pashov_banner.jpg" alt="Pashov's profile photo" class="profile-photo">
             <p>Hi, I'm Pashov</p>
-            <p>Certified video editor and skilled colorist with a passion for transforming raw footage into captivating visual stories. I specialize in enhancing narratives through precise editing and vibrant color grading, ensuring every project resonates with its audience.</p>
+            <p>Certified video editor and skilled colorist with a passion for transforming raw footage into captivating visual stories.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Z4pCqK-V_Wo" title="Long Form Edit" allowfullscreen></iframe>
+            </div>
         </div>
     </section>
 
-    <!-- Content Wrapper for Long Form and Short Form -->
-    <div id="content-wrapper">
-        <!-- Long Form Section -->
-        <section id="long-form">
-            <h3>Long Form</h3>
-            <div class="content-card">
-                <div class="text-container">
-                    <p>Long Format editing is all about depth and storytelling. It transforms extended footage—documentaries, interviews, podcasts, or detailed YouTube content—into immersive experiences that hold attention and build connection.</p>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/1Pa0wz2vTG4" title="Long Form Edit" allowfullscreen></iframe>
-                </div>
+    <!-- Wrapper for all content -->
+<div class="wrapper">
+    <!-- Long Form Section -->
+    <section id="long-form">
+        <h3>Long Form</h3>
+        <div class="content-card">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/1Pa0wz2vTG4" title="Long Form Edit" allowfullscreen></iframe>
             </div>
-        </section>
-
-
-        <!-- Short Form Section -->
-        <section id="short-form">
-            <h3>Short Form</h3>
-            <div class="content-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/m19c6JAmZiI" title="Short Form Edit" allowfullscreen></iframe>
-                </div>
-                <div class="text-container">
-                    <p>Short Format editing is all about grabbing attention instantly. I take your content and craft it into sharp, engaging videos that make a big impact in just seconds—perfect for social media, ads, and quick storytelling.</p>
-                </div>
+            <div class="text-container">
+                <p>Long format editing is about depth and storytelling, perfect for documentaries and interviews.</p>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <!-- Short Form Section -->
+    <section id="short-form">
+        <h3>Short Form</h3>
+        <div class="content-card">
+            <div class="text-container">
+                <p>Short form editing is fast-paced and ideal for social media, ads, and quick storytelling.</p>
+            </div>
+            <div class="video-container2">
+                <iframe src="https://www.youtube.com/embed/m19c6JAmZiI" title="Short Form Edit" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Link -->
+    <section id="portfolio-link">
+        <h3><a href="portfolio.html">View My Portfolio</a></h3>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h3>Client Testimonials</h3>
+        <div class="testimonial">
+            <p>"Pashov's editing took my video project to the next level. Highly recommended!" - Client A</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h3>Contact Me</h3>
+        <form action="/submit-form" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</div>
+
 
 </body>
 </html>
