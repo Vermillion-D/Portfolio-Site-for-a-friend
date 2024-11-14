@@ -4,31 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Gallery</title>
-    <link rel="stylesheet" href="Css/portfolio.css">
+    <link rel="stylesheet" href="../Css/Portfolio.css">
 </head>
 <body>
+
+        <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <img src="../Images/Pashov_banner.jpg" alt="Pashov's profile photo" class="profile-photo">
+        </div>
+    </section>
+
+
+    <!-- Wrapper for portfolio items -->
     <div class="wrapper">
         <header>
-            <h1>My Portfolio</h1>
-            <div id="info">
-                <button onclick="toggleInfo()">Info</button>
-                <div id="info-content" class="hidden">
-                    <p>Click on any video thumbnail to see more about the project.</p>
-                </div>
+            <div class="header-content">
+                <h1>My Portfolio</h1>
             </div>
         </header>
+
+        <section class="more info">
+            <p>More Info:</p>
+            <button class="show-more" onclick="toggleInfo()">
+                <span id="arrow">⇒</span>
+            </button>
+        </section>
+
+        <section id="more-content" class="hidden">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </section>
+
+        <!-- Portfolio Gallery -->
         <section class="gallery">
-            <div class="gallery-item">
-                
-                <p class="video-title">Video Title 1</p>
+            <div class="gallery-item" onclick="openModal('video1')">
+                <div class="video-thumbnail" style="background-image: url('video-thumbnail1.jpg');">
+                    <p class="video-title">Project 1</p>
+                </div>
             </div>
-            <div class="gallery-item">
-                
-                <p class="video-title">Video Title 2</p>
+            <div class="gallery-item" onclick="openModal('video2')">
+                <div class="video-thumbnail" style="background-image: url('video-thumbnail2.jpg');">
+                    <p class="video-title">Project 2</p>
+                </div>
             </div>
             <!-- Add more gallery items as needed -->
         </section>
+
+        <!-- Modal for displaying video details -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modal-body">
+                    <!-- Dynamic content for the modal will be injected here -->
+                </div>
+            </div>
+        </div>
+
     </div>
-    <script src="Js/script.js"></script>
+    
+    <script src="../Js/Script.js"></script>
 </body>
 </html>

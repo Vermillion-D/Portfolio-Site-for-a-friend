@@ -7,23 +7,55 @@ body {
     font-weight: 700;
     font-style: italic;
     text-transform: capitalize;
+    margin: 0;
+    padding: 0;
 }
 
 /* Main Wrapper to Control Width and Center Content */
 .wrapper {
-    max-width: 1600px; /* Maximum width for content */
+    max-width: 1500px; /* Maximum width for content */
     margin: 0 auto; /* Center content */
     padding: 0 20px; /* Padding on sides */
 }
 
-/* Header and Info Button */
-header {
+/* Hero Section Banner */
+#hero {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
+    text-align: center;
+    padding: 68px 20px 0 20px;
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
+/* Hero Section Profile Photo */
+.profile-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Hero Section Content */
+.hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+
+/* Center Header Inside Wrapper */
+header {
+    display: flex;
+    justify-content: center; /* Center the header content */
+    align-items: center;
+    width: 100%; /* Ensure header is full-width */
+}
+
+/* Info Button Styling */
 #info {
     display: inline-block;
 }
@@ -38,19 +70,6 @@ header {
     border-radius: 5px;
 }
 
-#info-content {
-    display: none;
-    margin-top: 10px;
-    padding: 20px;
-    background-color: #222;
-    border-radius: 10px;
-}
-
-/* Show info content when active */
-#info-content.active {
-    display: block;
-}
-
 /* Portfolio Gallery */
 .gallery {
     display: grid;
@@ -59,22 +78,117 @@ header {
     margin-top: 30px;
 }
 
-/* Video Container */
-.video-container {
+/* Video Thumbnail (Gif-like Preview) */
+.video-thumbnail {
     background-color: #333;
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.video-container iframe {
+.video-thumbnail:hover {
+    opacity: 0.8;
+}
+
+.video-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Modal (Pop-up) Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 750px; /* Adjust this as needed */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #222;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close {
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#modal-body {
+    text-align: center;
+}
+
+/* Additional Content Section (Initially hidden) */
+#more-content.hidden {
+    display: none;
+}
+
+/* Arrow Transition */
+#arrow {
+    font-size: 2em;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when clicked */
+#arrow.rotate {
+    transform: rotate(90deg); /* Rotate arrow to point down (⇓) */
+}
+
+/* Arrow container and button style */
+.more-info button {
+    background-color: rgba(34, 34, 34, 0);
+    color: white;
     border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .video-container iframe {
         height: auto;
+    }
+
+    #arrow {
+        font-size: 1.5em;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* Stack gallery items on smaller screens */
+    }
+
+    #portfolio-banner {
+        height: 250px; /* Adjust banner height for smaller screens */
     }
 }

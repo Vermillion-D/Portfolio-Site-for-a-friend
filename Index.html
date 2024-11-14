@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pashov Video Editor Portfolio</title>
+    <title>Pashov Video Editor</title>
     <link rel="stylesheet" href="Css/index.css">
 </head>
 <body>
@@ -12,8 +12,6 @@
     <section id="hero">
         <div class="hero-content">
             <img src="Images/Pashov_banner.jpg" alt="Pashov's profile photo" class="profile-photo">
-            <p>Hi, I'm Pashov</p>
-            <p>Certified video editor and skilled colorist with a passion for transforming raw footage into captivating visual stories.</p>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/Z4pCqK-V_Wo" title="Long Form Edit" allowfullscreen></iframe>
             </div>
@@ -21,61 +19,106 @@
     </section>
 
     <!-- Wrapper for all content -->
-<div class="wrapper">
-    <!-- Long Form Section -->
-    <section id="long-form">
-        <h3>Long Form</h3>
-        <div class="content-card">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/1Pa0wz2vTG4" title="Long Form Edit" allowfullscreen></iframe>
+    <div class="wrapper">
+        <!-- Long Form Section -->
+        <section id="long-form">
+            <h3>Long Form</h3>
+            <div class="content-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/1Pa0wz2vTG4" title="Long Form Edit" allowfullscreen></iframe>
+                </div>
+                <div class="text-container">
+                    <p>Long format editing is about depth and storytelling, perfect for documentaries and interviews.</p>
+                </div>
             </div>
-            <div class="text-container">
-                <p>Long format editing is about depth and storytelling, perfect for documentaries and interviews.</p>
+        </section>
+
+        <!-- Short Form Section -->
+        <section id="short-form">
+            <h3>Short Form</h3>
+            <div class="content-card">
+                <div class="text-container">
+                    <p>Short form editing is fast-paced and ideal for social media, ads, and quick storytelling.</p>
+                </div>
+                <div class="video-container2">
+                    <iframe src="https://www.youtube.com/embed/m19c6JAmZiI" title="Short Form Edit" allowfullscreen></iframe>
+                </div>
             </div>
+        </section>
+
+        <!-- Thumbnail Design -->
+        <section id="thumbnail-design">
+            <h3>Thumbnail Design</h3>
+            <div class="thumbnail-grid">
+                <div class="thumbnail-item">
+                    <img src="Images/Thumbnail.jpg" alt="Thumbnail 1">
+                </div>
+                <div class="text-container">
+                    <p>Thumbnail design is essential for creating eye-catching visuals in your video content.</p>
+                    <p>Some popular thumbnail designs include logo placement, color transitions, and animation.</p>
+                    <p>I can provide you with:</p>
+                    <p>Custom, eye-catching thumbnails designed to grab attention and boost clicks!</p>
+                </div>
+            </div>
+        </section>
+
+    <!-- Carousel Section for About Me and Softwares -->
+    <section id="carousel">
+        <div class="carousel-container">
+            <!-- About Me Section -->
+            <section class="carousel-section active" id="about-me">
+                <h3>About Me</h3>
+                <p>I'm a dedicated video editor with nearly two years of hands-on experience, passionate about bringing stories to life through dynamic visuals and sound.</p>
+                <p>Skilled in color grading, audio post-production, and visual effects, I know how to craft polished, professional videos that stand out.</p>
+            </section>
+            
+            <!-- Softwares Section -->
+            <section class="carousel-section" id="softwares">
+                <h3>Softwares</h3>
+                <p>I work with DaVinci Resolve Studio, a powerhouse software known for its precision and creative flexibility, allowing me to achieve cinematic color accuracy, seamless audio, and high-quality effects—all in one platform.</p>
+                <p>I also use Photoshop to create engaging thumbnails that capture attention and drive views, ensuring your content looks compelling from the first glance.</p>
+                <div class="software-images">
+                    <img src="Images/DaVinci_Resolve_logo.png" alt="Software 1">
+                    <img src="Images/Photoshop_logo.png" alt="Software 2">
+                </div>
+            </section>
+        </div>
+
+        <!-- Carousel Controls (Arrows) -->
+        <div class="carousel-controls">
+            <button id="prev-btn" class="carousel-arrow left">&#8592;</button>
+            <button id="next-btn" class="carousel-arrow right">&#8594;</button>
         </div>
     </section>
 
-    <!-- Short Form Section -->
-    <section id="short-form">
-        <h3>Short Form</h3>
-        <div class="content-card">
-            <div class="text-container">
-                <p>Short form editing is fast-paced and ideal for social media, ads, and quick storytelling.</p>
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h3>Client Testimonials</h3>
+            <div class="testimonial">
+                <p>"Pashov's editing took my video project to the next level. Highly recommended!" - Client A</p>
             </div>
-            <div class="video-container2">
-                <iframe src="https://www.youtube.com/embed/m19c6JAmZiI" title="Short Form Edit" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Portfolio Link -->
-    <section id="portfolio-link">
-        <h3><a href="Pages/portfolio.html">View My Portfolio</a></h3>
-    </section>
+        <!-- Portfolio Link -->
+        <section id="portfolio-link">
+            <h3><a href="Pages/portfolio.html">View My Portfolio</a></h3>
+        </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h3>Client Testimonials</h3>
-        <div class="testimonial">
-            <p>"Pashov's editing took my video project to the next level. Highly recommended!" - Client A</p>
-        </div>
-    </section>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h3>Contact Me</h3>
+            <form action="/submit-form" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h3>Contact Me</h3>
-        <form action="/submit-form" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-</div>
-
-
+    <script src="Js/Script.js"></script>
 </body>
 </html>
