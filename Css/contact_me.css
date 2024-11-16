@@ -161,6 +161,11 @@ body {
     margin-bottom: 10px;
 }
 
+.footer-row h6 {
+    font-size: 0.5em;
+    margin-bottom: 5px;
+}
+
 .footer-row p,
 .footer-row ul {
     font-size: 0.9em;

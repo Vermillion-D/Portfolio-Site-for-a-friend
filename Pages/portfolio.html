@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Gallery</title>
     <link rel="stylesheet" href="../Css/Portfolio.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
     <header id="header">
         <nav class="navbar">
             <ul class="left-links">
-                <li><a href="Index.html">Home</a></li>
+                <li><a href="../Index.html">Home</a></li>
             </ul>
             <ul class="right-links">
-                <li><a href="Pages/portfolio.html">Portfolio</a></li>
-                <li><a href="Pages/contact_me.html">Contacts</a></li>
+                <li><a href="../Pages/portfolio.html">Portfolio</a></li>
+                <li><a href="../Pages/contact_me.html">Contacts</a></li>
             </ul>
          </nav>
     </header>
@@ -23,7 +24,7 @@
      <!-- Hero Section -->
     <section class="hero-section" id="hero">
         <div class="hero-content">
-            <img src="Images/Pashov_banner.jpg" alt="Pashov's profile photo" class="profile-photo">
+            <img src="../Images/Pashov_banner.jpg" alt="Pashov's profile photo" class="profile-photo">
         </div>
     </section>
 
@@ -36,16 +37,17 @@
             </div>
         </header>
 
+        <!-- More Info Toggle-->
         <section class="more info">
-            <p>More Info:</p>
             <button class="show-more" onclick="toggleInfo()">
+                <span id="info"> More Info:</span>
                 <span id="arrow">⇒</span>
             </button>
         </section>
 
         <section id="more-content" class="hidden">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p>A showcase of my current portfolio</p>
+            <p>Professional and Business related video editing</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -54,14 +56,16 @@
         <!-- Portfolio Gallery -->
         <section class="gallery">
             <div class="gallery-item" onclick="openModal('video1')">
-                <div class="video-thumbnail" style="background-image: url('video-thumbnail1.jpg');">
-                    <p class="video-title">Project 1</p>
+                <div class="video-thumbnail" style="background-image: url('../Images/Thumbnail.jpg');"
+                data-gif="../Images/davinci-resolve-audio-export.gif">
                 </div>
+                <p class="video-title">Fully Automated Cash Cow</p>
             </div>
             <div class="gallery-item" onclick="openModal('video2')">
-                <div class="video-thumbnail" style="background-image: url('video-thumbnail2.jpg');">
-                    <p class="video-title">Project 2</p>
+                <div class="video-thumbnail" style="background-image: url('../Images/Bulgarian_Thumbnail.jpg');"
+                data-gif="../Images/davinci-resolve-audio-export.gif">
                 </div>
+                <p class="video-title">Bulgarian Comments</p>
             </div>
             <!-- Add more gallery items as needed -->
         </section>
@@ -77,14 +81,12 @@
         </div>
     </div>
 
-    <script src="Js/Script.js"></script>
-    
+    <!-- Footer Section -->    
     <footer id="footer">
         <div class="footer-content">
             <div class="footer-row">
                 <h4><a href="Pages/contact_me.html">Contact Me</a></h4>
                 <p>Email: <a href="mailto:spasimir800@gmail.com">spasimir800@gmail.com</a></p>
-                <p>Phone: +359 89 952 8655</p>
             </div>
             <div class="footer-row">
                 <h4>Collaborators</h4>
@@ -95,9 +97,10 @@
                 </ul>
             </div>
             <div class="footer-row">
-                <h4>Follow Me</h4>
+                <h4>Social Media</h4>
                 <a href="https://x.com/SpasimirPashov" target="_blank"><i class="fab fa-x"></i> SpasimirPashov</a><br>
                 <a href="https://www.instagram.com/pashov_04/" target="_blank"><i class="fab fa-instagram"></i> pashov_04</a>
+                <h6>you can also contact me there</h6>
             </div>
         </div>
         <div class="footer-bottom">
@@ -105,6 +108,10 @@
         </div>
     </footer>
     
-    <script src="Js/Script.js"></script>
+    <!-- JavaScript Section-->
+    <script src="../Js/Navbar.js"></script>
+    <script src="../Js/Arrow_click.js"></script>
+    <script src="../Js/Modal.js"></script>
+    <script src="../Js/Img_to_gif_hover.js"></script>
 </body>
 </html>

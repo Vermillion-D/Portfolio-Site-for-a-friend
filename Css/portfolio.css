@@ -20,7 +20,6 @@ body {
     color: #FFFFFF;
     font-weight: 700;
     text-decoration: none;
-    font-style: italic;
     font-variant: normal;
     text-transform: none;
 }
@@ -124,53 +123,61 @@ header {
     display: inline-block;
 }
 
-#info button {
-    background-color: rgba(34, 34, 34, 0);
-    color: white;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
+/* Gallery Item */
+.gallery-item {
+    display: flex;
+    flex-direction: column;  /* Arrange content vertically */
+    height: 30vh;           /* Set a fixed height for the gallery item */
+    overflow: hidden;        /* Prevent content overflow */
 }
 
-/* Portfolio Gallery */
-.gallery {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    margin-top: 30px;
-}
-
-/* Video Thumbnail (Gif-like Preview) */
+/* Video Thumbnail */
 .video-thumbnail {
     background-color: #333;
-    padding: 10px;
     border-radius: 10px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    height: 200px;
+    background-size: 100% 100%; /* Make sure it stretches to fit the container */
+    background-position: center center; /* Ensure the image stays centered */
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-image 0.3s ease-in-out, opacity 0.3s ease;
+    width: 100%; /* Ensure full width */
+    height: 100%; /* Ensure full height */
 }
 
-.video-thumbnail:hover {
-    opacity: 0.8;
+/* Title Container */
+.video-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
 }
 
+/* Video Title */
 .video-title {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 18px;
+    font-size: 1.3rem;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #333; /* Optional for contrast */
     padding: 5px;
     border-radius: 5px;
+    margin: 0;
+}
+
+/* Hover effect */
+.video-thumbnail:hover {
+    opacity: 0.8;
+    background-image: url('../Images/davinci-resolve-audio-export.gif');  /* Add a gif as a hover effect */
+}
+
+/* Gallery Layout */
+.gallery {
+    display: grid;
+    gap: 5vh;
+    grid-template-columns: repeat(auto-fill, minmax(33vh, 1fr)); /* Responsive grid */
+    margin-top: 30px;
 }
 
 /* Modal (Pop-up) Styles */
@@ -199,7 +206,7 @@ header {
     color: white;
     font-size: 2em;
     position: absolute;
-    top: 10px;
+    top: 35px;
     right: 20px;
     cursor: pointer;
 }
@@ -216,6 +223,7 @@ header {
 /* Arrow Transition */
 #arrow {
     font-size: 2em;
+    color: #ccc;
     transition: transform 0.3s ease;
 }
 
@@ -225,17 +233,30 @@ header {
 }
 
 /* Arrow container and button style */
-.more-info button {
-    background-color: rgba(34, 34, 34, 0);
-    color: white;
-    border: none;
-    font-size: 2em;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.show-more {
+    display: inline-flex; /* Aligns items in a row */
+    align-items: center; /* Vertically aligns the text and arrow */
+    border: none; /* Remove default button borders */
+    background: none; /* Remove default button background */
+    color: white; /* Text color */
+    font-size: 1em; /* Adjust font size */
+    cursor: pointer; /* Show pointer on hover */
+    gap: 5px; /* Space between "More Info:" and the arrow */
+    padding: 5px; /* Add padding for clickable area */
+}
+
+/* Styling for the #info span */
+.show-more #info {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: normal;
+    text-transform: none;
 }
 
 /* Responsive Adjustments */
@@ -264,6 +285,7 @@ header {
     padding: 20px 40px;
     text-align: center;
     border-top: 2px solid #333;
+    margin-top: 5vh;
 }
 
 .footer-content {
@@ -281,6 +303,11 @@ header {
 .footer-row h4 {
     font-size: 1.2em;
     margin-bottom: 10px;
+}
+
+.footer-row h6 {
+    font-size: 0.5em;
+    margin-bottom: 5px;
 }
 
 .footer-row p,
