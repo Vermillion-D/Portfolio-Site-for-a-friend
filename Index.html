@@ -5,14 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pashov Video Editor</title>
     <link rel="stylesheet" href="Css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Hero Section with Intro Video -->
-    <section id="hero">
+    <header id="header">
+        <nav class="navbar">
+            <ul class="left-links">
+                <li><a href="Index.html">Home</a></li>
+            </ul>
+            <ul class="right-links">
+                <li><a href="Pages/portfolio.html">Portfolio</a></li>
+                <li><a href="Pages/contact_me.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
         <div class="hero-content">
             <img src="Images/Pashov_banner.jpg" alt="Pashov's profile photo" class="profile-photo">
-            <div class="video-container">
+        </div>
+    </section>
+
+    <!-- Intro Video -->
+    <section id="Intro">
+        <div class="intro-content">
+            <div class="intro-video-container">
                 <iframe src="https://www.youtube.com/embed/Z4pCqK-V_Wo" title="Long Form Edit" allowfullscreen></iframe>
             </div>
         </div>
@@ -78,8 +97,12 @@
                 <p>I work with DaVinci Resolve Studio, a powerhouse software known for its precision and creative flexibility, allowing me to achieve cinematic color accuracy, seamless audio, and high-quality effects—all in one platform.</p>
                 <p>I also use Photoshop to create engaging thumbnails that capture attention and drive views, ensuring your content looks compelling from the first glance.</p>
                 <div class="software-images">
-                    <img src="Images/DaVinci_Resolve_logo.png" alt="Software 1">
-                    <img src="Images/Photoshop_logo.png" alt="Software 2">
+                    <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank">
+                        <img src="Images/DaVinci_Resolve_logo.png" alt="Software 1">
+                    </a>
+                    <a href="https://www.adobe.com/products/photoshop.html" target="_blank">
+                        <img src="Images/Photoshop_logo.png" alt="Software 2">
+                    </a>
                 </div>
             </section>
         </div>
@@ -103,21 +126,34 @@
         <section id="portfolio-link">
             <h3><a href="Pages/portfolio.html">View My Portfolio</a></h3>
         </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h3>Contact Me</h3>
-            <form action="/submit-form" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
     </div>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-row">
+                <h4><a href="Pages/contact_me.html">Contact Me</a></h4>
+                <p>Email: <a href="mailto:spasimir800@gmail.com">spasimir800@gmail.com</a></p>
+                <p>Phone: +359 89 952 8655</p>
+            </div>
+            <div class="footer-row">
+                <h4>Collaborators</h4>
+                <ul>
+                    <li><a href="https://collaborator1.com" target="_blank">Collaborator 1</a></li>
+                    <li><a href="https://collaborator2.com" target="_blank">Collaborator 2</a></li>
+                    <li><a href="https://collaborator3.com" target="_blank">Collaborator 3</a></li>
+                </ul>
+            </div>
+            <div class="footer-row">
+                <h4>Follow Me</h4>
+                <a href="https://x.com/SpasimirPashov" target="_blank"><i class="fab fa-x"></i> SpasimirPashov</a><br>
+                <a href="https://www.instagram.com/pashov_04/" target="_blank"><i class="fab fa-instagram"></i> pashov_04</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pashov. All rights reserved.</p>
+        </div>
+    </footer>
+    
 
     <script src="Js/Script.js"></script>
 </body>

@@ -104,157 +104,35 @@ body {
     margin-bottom: 20px;
 }
 
-/* Main Wrapper to Control Width and Center Content */
-.wrapper {
-    max-width: 1500px; /* Maximum width for content */
-    margin: 0 auto; /* Center content */
-    padding: 0 20px; /* Padding on sides */
-}
-
-/* Center Header Inside Wrapper */
-header {
-    display: flex;
-    justify-content: center; /* Center the header content */
-    align-items: center;
-    width: 100%; /* Ensure header is full-width */
-}
-
-/* Info Button Styling */
-#info {
-    display: inline-block;
-}
-
-#info button {
-    background-color: rgba(34, 34, 34, 0);
-    color: white;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-/* Portfolio Gallery */
-.gallery {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    margin-top: 30px;
-}
-
-/* Video Thumbnail (Gif-like Preview) */
-.video-thumbnail {
-    background-color: #333;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.video-thumbnail:hover {
-    opacity: 0.8;
-}
-
-.video-title {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 18px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    border-radius: 5px;
-}
-
-/* Modal (Pop-up) Styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
-    overflow: auto;
-}
-
-.modal-content {
+/* Contact Form Section */
+#contact {
     background-color: #222;
-    margin: 10% auto;
     padding: 20px;
+    margin: 40px auto;
     border-radius: 10px;
-    width: 80%;
-    max-width: 800px;
+    max-width: 850px; /* Set maximum width to make it more compact */
 }
 
-.close {
-    color: white;
-    font-size: 2em;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
+#contact form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
 }
 
-#modal-body {
-    text-align: center;
-}
-
-/* Additional Content Section (Initially hidden) */
-#more-content.hidden {
-    display: none;
-}
-
-/* Arrow Transition */
-#arrow {
-    font-size: 2em;
-    transition: transform 0.3s ease;
-}
-
-/* Rotate arrow when clicked */
-#arrow.rotate {
-    transform: rotate(90deg); /* Rotate arrow to point down (⇓) */
-}
-
-/* Arrow container and button style */
-.more-info button {
-    background-color: rgba(34, 34, 34, 0);
-    color: white;
-    border: none;
-    font-size: 2em;
-    cursor: pointer;
+#contact input, #contact textarea, #contact button {
     padding: 10px;
+    background-color: #444;
+    border: none;
+    color: white;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn’t expand width */
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .video-container iframe {
-        height: auto;
-    }
-
-    #arrow {
-        font-size: 1.5em;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr; /* Stack gallery items on smaller screens */
-    }
-
-    #portfolio-banner {
-        height: 250px; /* Adjust banner height for smaller screens */
-    }
+#contact button {
+    background-color: rgba(34, 34, 34, 0);
+    cursor: pointer;
+    font-weight: bold;
 }
 
 /* Footer Section */
