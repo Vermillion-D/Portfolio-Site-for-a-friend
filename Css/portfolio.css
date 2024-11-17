@@ -24,6 +24,10 @@ body {
     text-transform: none;
 }
 
+body h2 {
+    font-style: oblique;
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -63,6 +67,7 @@ body {
 
 .navbar a:hover {
     text-decoration: underline;
+    font-style: oblique;
 }
 
 /* Navbar appears only after scroll to the top */
@@ -78,7 +83,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: rgba(34, 34, 34, 0.555); /* Line color */
+    background-color: aliceblue; /* Line color */
 }
 
 
@@ -99,13 +104,14 @@ body {
 .profile-photo {
     width: 100%;
     height: auto;
+    border-bottom: aliceblue solid thin;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
 /* Main Wrapper to Control Width and Center Content */
 .wrapper {
-    max-width: 1500px; /* Maximum width for content */
+    max-width: 1400px; /* Maximum width for content */
     margin: 0 auto; /* Center content */
     padding: 0 20px; /* Padding on sides */
 }
@@ -126,8 +132,10 @@ header {
 /* Gallery Item */
 .gallery-item {
     display: flex;
+    border: aliceblue inset;
+    border-radius: 10px;
     flex-direction: column;  /* Arrange content vertically */
-    height: 30vh;           /* Set a fixed height for the gallery item */
+    height: 25vh;           /* Set a fixed height for the gallery item */
     overflow: hidden;        /* Prevent content overflow */
 }
 
@@ -254,7 +262,7 @@ header {
     color: #FFFFFF;
     font-weight: 700;
     text-decoration: none;
-    font-style: italic;
+    font-style: oblique;
     font-variant: normal;
     text-transform: none;
 }
@@ -293,6 +301,7 @@ header {
     flex-direction: row; /* Lay out the footer rows in a horizontal row */
     justify-content: space-between;
     gap: 20px;  /* Space between the footer rows */
+    font-style: oblique;
 }
 
 .footer-row {

@@ -21,9 +21,12 @@ body {
     color: #FFFFFF;
     font-weight: 700;
     text-decoration: none;
-    font-style: italic;
     font-variant: normal;
     text-transform: none;
+}
+
+body h3 {
+    font-style: oblique;
 }
 
 #header {
@@ -65,6 +68,7 @@ body {
 
 .navbar a:hover {
     text-decoration: underline;
+    font-style: oblique;
 }
 
 /* Navbar appears only after scroll to the top */
@@ -80,7 +84,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: rgba(34, 34, 34, 0.555); /* Line color */
+    background-color: aliceblue; /* Line color */
 }
 
 
@@ -101,6 +105,7 @@ body {
 .profile-photo {
     width: 100%;
     height: auto;
+    border-bottom: aliceblue solid thin;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -116,7 +121,7 @@ body {
 /* Intro Video Container */
 .intro-video-container {
     width: 100%; /* Make sure the container takes the full width */
-    max-width: 1400px; /* Max width of the video container */
+    max-width: 160vh; /* Max width of the video container */
     margin: 0 auto; /* Center the container */
     height: auto;
     margin-top: 20px;
@@ -125,15 +130,16 @@ body {
 
 /* Video iframe */
 .intro-video-container iframe {
-    width: 80%; /* Make the iframe take the full width of its container */
-    height: 75vh; /* Set the height of the video */
+    width: 70%; /* Make the iframe take the full width of its container */
+    height: 65vh; /* Set the height of the video */
+    border: aliceblue inset thin;
     border-radius: 10px; /* Optional: for rounded corners */
 }
 
 
 /* Wrapper for all sections to control width and padding */
 .wrapper {
-    max-width: 1600px; /* Adjust max width of the content */
+    max-width: 1400px; /* Adjust max width of the content */
     margin: 0 auto; /* Center the content */
     padding: 0 20px; /* Add space on the left and right */
 }
@@ -186,19 +192,26 @@ body {
 /* Text and Video Containers */
 .text-container, .video-container, .video-container2 {
     padding: 10px;
+    text-align: center; /* Center align text */
+}
+
+.text-container {
+    justify-content: center;
 }
 
 /* Styling for Videos */
 .video-container iframe {
-    width: 100%;
-    height: 650px;
-    border: none;
+    width: 90%;
+    height: 52vh;
+    border: aliceblue inset thin;
+    border-radius: 10px;
 }
 
 .video-container2 iframe {
-    width: 72%;
-    height: 650px;
-    border: none;
+    width: 70%;
+    height: 60vh;
+    border: aliceblue inset thin;
+    border-radius: 10px;
 }
 
 /* Portfolio Link Section */
@@ -226,13 +239,69 @@ body {
     background-color: #333;
     padding: 20px;
     margin: 40px auto;
+    border: aliceblue outset thin;
     border-radius: 10px;
     max-width: 850px; /* Set maximum width for a more compact layout */
+    position: relative; /* To position arrows inside */
+    text-align: center; /* Center-align the content */
+    overflow: hidden; /* Hide anything outside the container */
 }
 
-.testimonial {
-    margin-bottom: 20px;
+.testimonial-container {
+    display: flex;
+    transition: transform 0.5s ease; /* Apply transition to move the entire container */
+    width: 100%;
 }
+
+.testimonial-section {
+    width: 100%; /* Each section should take the full width of the container */
+    text-align: center;
+    flex-shrink: 0; /* Prevent sections from shrinking */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Fade effect */
+}
+
+.testimonial-section.active {
+    opacity: 1; /* Fade in the active section */
+}
+
+/* Testimonial arrows */
+.testimonial-controls {
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.testimonial-arrow {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 2rem;
+    padding: 0;
+    border: aliceblue inset thin;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.testimonial-arrow.left {
+    position: absolute;
+    left: 0;
+    bottom: -2vh;
+}
+
+.testimonial-arrow.right {
+    position: absolute;
+    right: 4vh;
+    bottom: -2vh;
+}
+
 
 /* Thumbnail Section Styles */
 #thumbnail-design .thumbnail-grid {
@@ -247,6 +316,7 @@ body {
 #thumbnail-design .thumbnail-item img {
     width: 75%; /* Set the thumbnail size */
     height: auto; /* Maintain aspect ratio */
+    border: aliceblue inset thin;
     border-radius: 10px; /* Optional: rounded corners */
 }
 
@@ -260,34 +330,34 @@ body {
     margin-bottom: 20px; /* Space below the title */
 }
 
-
 /* Carousel Section */
 #carousel {
-    background-color: #222;
+    background-color: #333;
     padding: 40px;
     margin: 40px auto;
+    border: aliceblue outset thin;
     border-radius: 10px;
     max-width: 1000px;
     position: relative; /* To position arrows inside */
+    overflow: hidden;
 }
 
 .carousel-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 45vh; /* 80% of the viewport height */
+    transition: transform 0.5s ease; /* Apply transition to move the entire container */
+    width: 100%;
 }
 
-
-
 .carousel-section {
-    display: none;
+    width: 100%; /* Each section should take the full width of the container */
     text-align: center;
+    flex-shrink: 0; /* Prevent sections from shrinking */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Fade effect */
 }
 
 .carousel-section.active {
-    display: block;
+    opacity: 1; /* Fade in the active section */
 }
 
 .carousel-controls {
@@ -301,11 +371,11 @@ body {
 
 /* Semi-transparent arrows */
 .carousel-arrow {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     font-size: 2rem;
     padding: 0;
-    border: none;
+    border: aliceblue inset thin;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -318,12 +388,14 @@ body {
 /* Position arrows */
 .carousel-arrow.left {
     position: absolute;
-    left: -35px; /* Adjusted to move it closer to the side */
+    left: -3.8vh; /* Adjusted to move it closer to the side */
+    bottom: -2vh;
 }
 
 .carousel-arrow.right {
     position: absolute;
-    right: 45px;
+    right: 5vh;
+    bottom: -2vh;
 }
 
 
@@ -373,6 +445,7 @@ body {
     flex-direction: row; /* Lay out the footer rows in a horizontal row */
     justify-content: space-between;
     gap: 20px;  /* Space between the footer rows */
+    font-style: oblique;
 }
 
 .footer-row {

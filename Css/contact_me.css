@@ -20,7 +20,6 @@ body {
     color: #FFFFFF;
     font-weight: 700;
     text-decoration: none;
-    font-style: italic;
     font-variant: normal;
     text-transform: none;
 }
@@ -64,6 +63,7 @@ body {
 
 .navbar a:hover {
     text-decoration: underline;
+    font-style: oblique;
 }
 
 /* Navbar appears only after scroll to the top */
@@ -79,10 +79,8 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: rgba(34, 34, 34, 0.555); /* Line color */
+    background-color: aliceblue; /* Line color */
 }
-
-
 
 /* Hero Section */
 #Intro {
@@ -100,6 +98,7 @@ body {
 .profile-photo {
     width: 100%;
     height: auto;
+    border-bottom: aliceblue solid thin;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -109,8 +108,17 @@ body {
     background-color: #222;
     padding: 20px;
     margin: 40px auto;
+    border: aliceblue outset thin;
     border-radius: 10px;
-    max-width: 850px; /* Set maximum width to make it more compact */
+    max-width: 50vh;
+    font-style: oblique;
+    display: flex; /* Add flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: left; /* Center items horizontally */
+}
+
+#contact h3 {
+    text-align: center;
 }
 
 #contact form {
@@ -119,20 +127,39 @@ body {
     gap: 15px;
 }
 
-#contact input, #contact textarea, #contact button {
+#contact input {
     padding: 10px;
     background-color: #444;
-    border: none;
+    border: aliceblue solid thin;
     color: white;
     border-radius: 5px;
-    width: 100%;
+    width: 50%;
     box-sizing: border-box; /* Ensures padding doesn’t expand width */
 }
 
+#contact textarea {
+    padding: 10px;
+    background-color: #444;
+    border: aliceblue solid thin;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 #contact button {
+    padding: 10px;
     background-color: rgba(34, 34, 34, 0);
+    border: aliceblue solid thin;
+    color: white;
+    border-radius: 5px;
+    width: auto; /* Adaptive width */
     cursor: pointer;
     font-weight: bold;
+
+    /* Center the button */
+    display: block; 
+    margin: 0 auto; /* Automatically center the button horizontally */
 }
 
 /* Footer Section */
@@ -149,6 +176,7 @@ body {
     flex-direction: row; /* Lay out the footer rows in a horizontal row */
     justify-content: space-between;
     gap: 20px;  /* Space between the footer rows */
+    font-style: oblique;
 }
 
 .footer-row {
