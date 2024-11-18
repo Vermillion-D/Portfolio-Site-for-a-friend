@@ -6,20 +6,18 @@ html, body {
 body {
     padding: 0;
     margin: 0;
-    background-color: black;
+    background: linear-gradient(to bottom right, black, #3b478a); /* Diagonal gradient */
+    background-size: 100% 100%; /* Ensures the gradient fills the viewport */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-attachment: fixed; /* Keeps the gradient fixed during scrolling */
     color: white;
-    background-image: url('path_to_your_image.jpg'); /* Replace with your image path */
-    background-size: cover; /* Make the image cover the entire screen */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-attachment: scroll; /* Ensure the background scrolls with the content */
     font-family: "Times New Roman", Times, serif;
-    font-size: 26px;
+    font-size: 24px;
     letter-spacing: 2px;
     word-spacing: 2px;
-    color: #FFFFFF;
-    font-weight: 700;
+    font-weight: normal;
     text-decoration: none;
+    font-style: normal;
     font-variant: normal;
     text-transform: none;
 }
@@ -63,7 +61,7 @@ body {
 
 .navbar a:hover {
     text-decoration: underline;
-    font-style: oblique;
+    color: #9290C3;
 }
 
 /* Navbar appears only after scroll to the top */
@@ -100,17 +98,18 @@ body {
     height: auto;
     border-bottom: aliceblue solid thin;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10vh;
 }
 
 /* Contact Form Section */
 #contact {
-    background-color: #222;
+    background: linear-gradient(to bottom right, #3d4369, #070F2B);
     padding: 20px;
     margin: 40px auto;
+    margin-bottom: 12vh;
     border: aliceblue outset thin;
     border-radius: 10px;
-    max-width: 50vh;
+    max-width: 80vh;
     font-style: oblique;
     display: flex; /* Add flexbox */
     flex-direction: column; /* Stack elements vertically */
@@ -129,7 +128,7 @@ body {
 
 #contact input {
     padding: 10px;
-    background-color: #444;
+    background-color: #535C91;
     border: aliceblue solid thin;
     color: white;
     border-radius: 5px;
@@ -139,11 +138,12 @@ body {
 
 #contact textarea {
     padding: 10px;
-    background-color: #444;
+    background-color: #535C91;
     border: aliceblue solid thin;
     color: white;
     border-radius: 5px;
     width: 100%;
+    height: 10em;
     box-sizing: border-box;
 }
 
@@ -162,21 +162,26 @@ body {
     margin: 0 auto; /* Automatically center the button horizontally */
 }
 
+#contact button:hover {
+    background-color: #535C91;
+    color: aliceblue;
+}
+
 /* Footer Section */
 #footer {
-    background-color: #111;
+    background-color: #13123a;
     color: white;
-    padding: 20px 40px;
-    text-align: center;
-    border-top: 2px solid #333;
+    padding: 5px 10vh;
+    text-align: left;
+    border-top: 2px solid #535C91;
 }
 
 .footer-content {
     display: flex;
     flex-direction: row; /* Lay out the footer rows in a horizontal row */
     justify-content: space-between;
-    gap: 20px;  /* Space between the footer rows */
-    font-style: oblique;
+    gap: 50vh;  /* Space between the footer rows */
+    font-weight: bold;
 }
 
 .footer-row {
@@ -221,7 +226,7 @@ body {
 
 /* Footer Bottom */
 .footer-bottom {
-    border-top: 1px solid #333;
+    border-top: 1px solid #535C91;
     padding-top: 10px;
     font-size: 0.8em;
     margin-top: 20px;

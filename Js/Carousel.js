@@ -123,3 +123,4 @@ showText(textIndex);
 
 // Start the auto-slide timer
 startTextAutoSlide();
+ 
