@@ -6,10 +6,10 @@ html, body {
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to bottom right, black, #3b478a); /* Diagonal gradient */
-    background-size: 100% 100%; /* Ensures the gradient fills the viewport */
-    background-repeat: no-repeat; /* Prevent repeating */
-    background-attachment: fixed; /* Keeps the gradient fixed during scrolling */
+    background: linear-gradient(to bottom right, #010230 50%, #01057b); /* Diagonal gradient */
+    background-size: 100% 100%; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
     color: white;
     font-family: "Times New Roman", Times, serif;
     font-size: 24px;
@@ -65,7 +65,7 @@ body h2 {
 
 .navbar a:hover {
     text-decoration: underline;
-    color: #9290C3;
+    color: #5f619d;
 }
 
 /* Navbar appears only after scroll to the top */
@@ -200,7 +200,7 @@ header {
 }
 
 .modal-content {
-    background: linear-gradient(to bottom right, #3d4369, #070F2B);
+    background: linear-gradient(to bottom right, #01057b, #010230);
     margin: 10% auto;
     padding: 20px;
     border: aliceblue inset thin;

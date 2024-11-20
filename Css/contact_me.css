@@ -6,7 +6,7 @@ html, body {
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to bottom right, black, #3b478a); /* Diagonal gradient */
+    background: linear-gradient(to bottom right, #010230 50%, #01057b); /* Diagonal gradient */
     background-size: 100% 100%; /* Ensures the gradient fills the viewport */
     background-repeat: no-repeat; /* Prevent repeating */
     background-attachment: fixed; /* Keeps the gradient fixed during scrolling */
@@ -61,7 +61,7 @@ body {
 
 .navbar a:hover {
     text-decoration: underline;
-    color: #9290C3;
+    color: #5f619d;
 }
 
 /* Navbar appears only after scroll to the top */
@@ -103,7 +103,7 @@ body {
 
 /* Contact Form Section */
 #contact {
-    background: linear-gradient(to bottom right, #3d4369, #070F2B);
+    background: linear-gradient(to bottom right, #01057b, #010230);
     padding: 20px;
     margin: 40px auto;
     margin-bottom: 12vh;
@@ -128,7 +128,7 @@ body {
 
 #contact input {
     padding: 10px;
-    background-color: #535C91;
+    background-color: #5f619d;
     border: aliceblue solid thin;
     color: white;
     border-radius: 5px;
@@ -138,7 +138,7 @@ body {
 
 #contact textarea {
     padding: 10px;
-    background-color: #535C91;
+    background-color: #5f619d;
     border: aliceblue solid thin;
     color: white;
     border-radius: 5px;
@@ -163,7 +163,7 @@ body {
 }
 
 #contact button:hover {
-    background-color: #535C91;
+    background-color: #5f619d;
     color: aliceblue;
 }
 

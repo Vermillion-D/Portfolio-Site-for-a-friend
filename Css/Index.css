@@ -7,7 +7,7 @@ html, body {
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to bottom right, black, #3b478a); /* Diagonal gradient */
+    background: linear-gradient(to bottom right, #010230 50%, #01057b); /* Diagonal gradient */
     background-size: 100% 100%; /* Ensures the gradient fills the viewport */
     background-repeat: no-repeat; /* Prevent repeating */
     background-attachment: fixed; /* Keeps the gradient fixed during scrolling */
@@ -69,7 +69,7 @@ body h3 {
 
 .navbar a:hover {
     text-decoration: underline;
-    color: #9290C3;
+    color: #5f619d;
 }
 
 /* Navbar appears only after scroll to the top */
@@ -153,11 +153,13 @@ body h3 {
     border-radius: 10px;
     width: 100%;
     margin: 20px;
+    margin-bottom: 12vh;
 }
 
 /* Long and Short Form Headers */
 #long-form h3, #short-form h3 {
     text-align: center;
+    font-size: 45px;
     margin: 0 0 60px; /* Add bottom margin to create space below the header */
     color: white;
 }
@@ -167,7 +169,6 @@ body h3 {
     display: grid;
     gap: 20px;
     width: 100%;
-    margin-bottom: 10vh; /* Add space below the content card */
 }
 
 /* Adjust space between sections */
@@ -222,6 +223,7 @@ body h3 {
 
 #portfolio-link h3 {
     margin: 0;
+    font-size: 60px;
 }
 
 #portfolio-link a {
@@ -232,11 +234,12 @@ body h3 {
 
 #portfolio-link a:hover {
     text-decoration: underline;
+    color: #5f619d;
 }
 
 /* Testimonials Section */
 #testimonials {
-    background: linear-gradient(to bottom right, #3d4369, #070F2B);
+    background: linear-gradient(to bottom right, #01057b, #010230);
     padding: 20px;
     margin: 40px auto;
     margin-bottom: 12vh;
@@ -252,6 +255,10 @@ body h3 {
     display: flex;
     transition: transform 0.5s ease; /* Apply transition to move the entire container */
     width: 100%;
+}
+
+#testimonials h3 {
+    font-size: 40px;
 }
 
 .testimonial-section {
@@ -334,11 +341,12 @@ p.quote {
 #thumbnail-design h3 {
     text-align: center; /* Center the section title */
     margin-bottom: 10vh; /* Space below the title */
+    font-size: 60px;
 }
 
 /* Carousel Section */
 #carousel {
-    background: linear-gradient(to bottom right, #3d4369, #070F2B);
+    background: linear-gradient(to bottom right, #01057b, #010230);
     padding: 40px;
     margin: 40px auto;
     margin-bottom: 12vh;
@@ -353,6 +361,10 @@ p.quote {
     display: flex;
     transition: transform 0.5s ease; /* Apply transition to move the entire container */
     width: 100%;
+}
+
+.carousel-container h3 {
+    font-size: 40px;
 }
 
 .carousel-section {
