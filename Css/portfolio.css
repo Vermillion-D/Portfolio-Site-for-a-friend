@@ -133,7 +133,10 @@ header {
     border-radius: 10px;
     flex-direction: column;  /* Arrange content vertically */
     height: 25vh;           /* Set a fixed height for the gallery item */
+    width: 37vh;
     overflow: hidden;        /* Prevent content overflow */
+    margin: 0;
+    padding: 0;
 }
 
 /* Video Thumbnail */
