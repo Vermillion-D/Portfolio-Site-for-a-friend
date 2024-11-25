@@ -13,18 +13,15 @@ body {
     background-attachment: fixed; /* Keeps the gradient fixed during scrolling */
     color: white;
     font-family: "Times New Roman", Times, serif;
-    font-size: 24px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
+    font-size: 1.5rem; /* 24px to rem */
+    letter-spacing: 0.125em; /* 2px to em */
+    word-spacing: 0.125em; /* 2px to em */
     font-weight: normal;
     text-decoration: none;
     font-style: normal;
     font-variant: normal;
     text-transform: none;
 }
-
-
-
 
 body h3 {
     font-weight: bold;
@@ -44,7 +41,7 @@ body h3 {
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem; /* 10px 20px to rem */
     width: 100%; /* Ensure the navbar takes up full width */
 }
 
@@ -58,7 +55,7 @@ body h3 {
 
 /* Navbar links */
 .right-links li {
-    margin-right: 12px; /* Adjust this value to your preference */
+    margin-right: 0.75rem; /* 12px to rem */
 }
 
 .navbar a {
@@ -84,11 +81,9 @@ body h3 {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 0.125rem; /* 2px to rem */
     background-color: aliceblue; /* Line color */
 }
-
-
 
 /* Hero Section */
 #Intro {
@@ -96,7 +91,7 @@ body h3 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 60px 20px;
+    padding: 3.75rem 1.25rem; /* 60px 20px to rem */
     background-size: cover;
     background-position: center;
     color: white;
@@ -107,7 +102,7 @@ body h3 {
     width: 100%;
     height: auto;
     border-bottom: aliceblue solid thin;
-    border-radius: 10px;
+    border-radius: 0.625rem; /* 10px to rem */
     margin-bottom: 10vh;
 }
 
@@ -125,9 +120,9 @@ body h3 {
     max-width: 160vh; /* Max width of the video container */
     margin: 0 auto; /* Center the container */
     height: auto;
-    margin-top: 20px;
+    margin-top: 1.25rem; /* 20px to rem */
     margin-bottom: 10vh;
-    border-radius: 10px;
+    border-radius: 0.625rem; /* 10px to rem */
 }
 
 /* Video iframe */
@@ -135,48 +130,48 @@ body h3 {
     width: 70%; /* Make the iframe take the full width of its container */
     height: 65vh; /* Set the height of the video */
     border: aliceblue inset thin;
-    border-radius: 10px; /* Optional: for rounded corners */
+    border-radius: 0.625rem; /* 10px to rem */
 }
 
 /* Wrapper for all sections to control width and padding */
 .wrapper {
-    max-width: 1400px; /* Adjust max width of the content */
+    max-width: 87.5rem; /* 1400px to rem */
     margin: 0 auto; /* Center the content */
-    padding: 0 20px; /* Add space on the left and right */
+    padding: 0 1.25rem; /* 20px to rem */
 }
 
 /* Long and Short Form Sections */
 #long-form, #short-form {
     background-color: rgba(34, 34, 34, 0); /* Transparent background */
-    padding: 20px;
-    border-radius: 10px;
+    padding: 1.25rem;
+    border-radius: 0.625rem; /* 10px to rem */
     width: 100%;
-    margin: 20px;
+    margin: 1.25rem;
     margin-bottom: 12vh;
 }
 
 /* Long and Short Form Headers */
 #long-form h3, #short-form h3 {
     text-align: center;
-    font-size: 45px;
-    margin: 0 0 60px; /* Add bottom margin to create space below the header */
+    font-size: 2.8125rem; /* 45px to rem */
+    margin: 0 0 3.75rem; /* 60px to rem */
     color: white;
 }
 
 /* Content Card Layout - Text and Video */
 #long-form .content-card, #short-form .content-card {
     display: grid;
-    gap: 20px;
+    gap: 1.25rem; /* 20px to rem */
     width: 100%;
 }
 
 /* Adjust space between sections */
 #long-form {
-    margin-top: 30px; /* Space above long form section */
+    margin-top: 1.875rem; /* 30px to rem */
 }
 
 #short-form {
-    margin-top: 30px; /* Space above short form section */
+    margin-top: 1.875rem; /* 30px to rem */
 }
 
 /* Long Form Video on Left, Text on Right */
@@ -191,7 +186,7 @@ body h3 {
 
 /* Text and Video Containers */
 .text-container, .video-container, .video-container2 {
-    padding: 10px;
+    padding: 0.625rem;
     text-align: center; /* Center align text */
 }
 
@@ -202,27 +197,27 @@ body h3 {
 /* Styling for Videos */
 .video-container iframe {
     width: 90%;
-    height: 52vh;
+    height: 52vh; /* Set the height of the video */
     border: aliceblue inset thin;
-    border-radius: 10px;
+    border-radius: 0.625rem; /* 10px to rem */
 }
 
 .video-container2 iframe {
     width: 70%;
-    height: 60vh;
+    height: 60vh; /* Set the height of the video */
     border: aliceblue inset thin;
-    border-radius: 10px;
+    border-radius: 0.625rem; /* 10px to rem */
 }
 
 /* Portfolio Link Section */
 #portfolio-link {
     text-align: center;
-    margin: 40px 0 10vh 0;
+    margin: 2.5rem 0 10vh 0; /* 40px 0 10vh to rem */
 }
 
 #portfolio-link h3 {
     margin: 0;
-    font-size: 60px;
+    font-size: 3.75rem; /* 60px to rem */
 }
 
 #portfolio-link a {
@@ -239,47 +234,46 @@ body h3 {
 /* Testimonials Section */
 #testimonials {
     background: linear-gradient(to bottom right, #01057b, #010230);
-    padding: 20px;
-    margin: 40px auto;
-    margin-bottom: 12vh;
+    padding: 1.25rem;
+    margin: 2.5rem auto 12vh;
     border: aliceblue outset thin;
-    border-radius: 10px;
-    max-width: 850px; /* Set maximum width for a more compact layout */
-    position: relative; /* To position arrows inside */
-    text-align: center; /* Center-align the content */
-    overflow: hidden; /* Hide anything outside the container */
+    border-radius: 0.625rem;
+    max-width: 53.125rem;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
 }
 
 .testimonial-container {
     display: flex;
-    transition: transform 0.5s ease; /* Apply transition to move the entire container */
+    transition: transform 0.5s ease;
     width: 100%;
 }
 
 #testimonials h3 {
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .testimonial-section {
-    width: 100%; /* Each section should take the full width of the container */
+    width: 100%;
     text-align: center;
-    flex-shrink: 0; /* Prevent sections from shrinking */
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.5s ease; /* Fade effect */
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.testimonial-section.active {
+    opacity: 1;
 }
 
 p.quote {
     font-style: italic;
 }
 
-.testimonial-section.active {
-    opacity: 1; /* Fade in the active section */
-}
-
 /* Testimonial arrows */
 .testimonial-controls {
     position: absolute;
-    bottom: 15px;
+    bottom: 1rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -289,7 +283,7 @@ p.quote {
 .testimonial-arrow {
     background-color: rgba(0, 0, 0, 0);
     color: white;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     padding: 0;
     border: none;
     border-radius: 50%;
@@ -303,96 +297,94 @@ p.quote {
 
 .testimonial-arrow.left {
     position: absolute;
-    left: -2.5vh;
-    bottom: -2vh;
+    left: -2.5em;
+    bottom: -1.25em;
 }
 
 .testimonial-arrow.right {
     position: absolute;
-    right: 1.6vh;
-    bottom: -2vh;
+    right: 1.6em;
+    bottom: -1.25em;
 }
 
-/* Thumbnail Section Styles */
+/* Thumbnail Section */
 #thumbnail-design .thumbnail-grid {
     display: flex;
-    flex-direction: column; /* Stack thumbnail and text vertically */
-    align-items: center; /* Horizontally center items */
-    justify-content: center; /* Vertically center items */
-    gap: 20px; /* Space between thumbnail and text */
-    text-align: center; /* Center text inside the container */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    text-align: center;
 }
 
 #thumbnail-design .thumbnail-item img {
-    width: 75%; /* Set the thumbnail size */
-    height: auto; /* Maintain aspect ratio */
+    width: 75%;
+    height: auto;
     border: aliceblue inset thin;
-    border-radius: 10px; /* Optional: rounded corners */
+    border-radius: 0.625rem;
     margin-bottom: 10vh;
 }
 
 #thumbnail-design .text-container {
-    max-width: 800px; /* Optional: restrict text container width */
-    color: white; /* Ensure text is white */
+    max-width: 50rem;
+    color: white;
     margin-bottom: 10vh;
 }
 
 #thumbnail-design h3 {
-    text-align: center; /* Center the section title */
-    margin-bottom: 10vh; /* Space below the title */
-    font-size: 60px;
+    text-align: center;
+    margin-bottom: 10vh;
+    font-size: 3.75rem;
 }
 
 /* Carousel Section */
 #carousel {
     background: linear-gradient(to bottom right, #01057b, #010230);
-    padding: 40px;
-    margin: 40px auto;
-    margin-bottom: 12vh;
+    padding: 2.5rem;
+    margin: 2.5rem auto 12vh;
     border: aliceblue outset thin;
-    border-radius: 10px;
-    max-width: 1000px;
-    position: relative; /* To position arrows inside */
+    border-radius: 0.625rem;
+    max-width: 62.5rem;
+    position: relative;
     overflow: hidden;
 }
 
 .carousel-container {
     display: flex;
-    transition: transform 0.5s ease; /* Apply transition to move the entire container */
+    transition: transform 0.5s ease;
     width: 100%;
 }
 
 .carousel-container h3 {
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .carousel-section {
-    width: 100%; /* Each section should take the full width of the container */
+    width: 100%;
     text-align: center;
-    flex-shrink: 0; /* Prevent sections from shrinking */
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.5s ease; /* Fade effect */
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .carousel-section.active {
-    opacity: 1; /* Fade in the active section */
+    opacity: 1;
 }
 
 .carousel-controls {
     position: absolute;
-    bottom: 15px;
+    bottom: 1rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border: none;
-    padding: 0 0;
+    padding: 0;
 }
 
-/* Semi-transparent arrows */
+/* Carousel Arrows */
 .carousel-arrow {
     background-color: transparent;
     color: white;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     border: none;
     border-radius: 40%;
     width: 1.2em;
@@ -404,10 +396,9 @@ p.quote {
     color: #9290C3;
 }
 
-/* Position arrows */
 .carousel-arrow.left {
     position: absolute;
-    left: -6vh; /* Adjusted to move it closer to the side */
+    left: -6vh;
     bottom: -2vh;
 }
 
@@ -423,41 +414,32 @@ p.quote {
 }
 
 .software-images {
-    display: flex;               /* Use flexbox to position the images side by side */
-    justify-content: center;     /* Center images horizontally */
-    gap: 20px;                   /* Add space between images */
-    margin-top: 20px;            /* Optional: add space above the images */
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
 }
 
 .software-images img {
-    width: 150px;                /* Adjust the image size (you can tweak this value) */
-    height: auto;                /* Maintain aspect ratio */
-    border-radius: 10px;         /* Optional: rounded corners */
-    transition: transform 0.3s ease; /* Smooth transition effect on hover */
+    width: 9.375rem;
+    height: auto;
+    border-radius: 0.625rem;
+    transition: transform 0.3s ease;
 }
 
-/* Optional: Image hover effect */
 .software-images img:hover {
-    transform: scale(1.1);       /* Slight zoom effect on hover */
+    transform: scale(1.1);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .carousel-arrow {
-        font-size: 1.5rem;
-        padding: 8px;
-    }
-}
-
-/* FAQ content */
+/* FAQ Section */
 #faq-section h3 {
     text-align: center;
-    font-size: 2em;
-    margin: 12vh 0 12vh 0;
+    font-size: 2rem;
+    margin: 12vh 0;
 }
 
 .faq-container {
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
 }
 
@@ -470,10 +452,9 @@ p.quote {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 0.625rem;
     background-color: transparent;
     border: none;
-    outline: none;
     font-size: 1.1em;
     font-weight: bold;
     color: white;
@@ -486,18 +467,24 @@ p.quote {
 }
 
 .faq-content {
-    display: none; /* Hidden by default */
-    padding: 10px;
+    display: none; /* Hide by default */
+    padding: 0.625rem; /* 10px in em */
     font-size: 0.95em;
     line-height: 1.5;
     color: white;
+    margin-bottom: 0.5em; /* Space between paragraphs */
 }
+
+.faq-item.active .faq-content {
+    display: block; /* Show both paragraphs when the FAQ item is active */
+}
+
 
 /* Footer Section */
 #footer {
     background-color: #13123a;
     color: white;
-    padding: 5px 10vh;
+    padding: 0.3125rem 10vh;
     text-align: left;
     border-top: 2px solid #535C91;
     margin-top: 12vh;
@@ -505,40 +492,39 @@ p.quote {
 
 .footer-content {
     display: flex;
-    flex-direction: row; /* Lay out the footer rows in a horizontal row */
     justify-content: space-between;
-    gap: 50vh;  /* Space between the footer rows */
+    gap: 50vh;
     font-weight: bold;
 }
 
 .footer-row {
     flex: 1;
-    min-width: 250px;  /* Ensure the footer rows have a minimum width */
+    min-width: 15.625rem;
 }
 
 .footer-row h4 {
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .footer-row h6 {
     font-size: 0.5em;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
 .footer-row p,
 .footer-row ul {
     font-size: 0.9em;
-    margin: 5px 0;
+    margin: 0.3125rem 0;
 }
 
 .footer-row ul {
-    list-style-type: none; /* Remove the default list item bullets */
-    padding-left: 0; /* Remove default padding */
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .footer-row li {
-    margin-bottom: 5px; /* Optional: space between list items */
+    margin-bottom: 0.3125rem;
 }
 
 .footer-row a {
@@ -551,22 +537,9 @@ p.quote {
     color: white;
 }
 
-/* Footer Bottom */
 .footer-bottom {
     border-top: 1px solid #535C91;
-    padding-top: 10px;
+    padding-top: 0.625rem;
     font-size: 0.8em;
-    margin-top: 20px;
-}
-
-/* Adjust for smaller screens */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column; /* Stack the footer rows vertically on smaller screens */
-        align-items: center;
-    }
-
-    .footer-row {
-        text-align: center; /* Center the text inside each row on smaller screens */
-    }
+    margin-top: 1.25rem;
 }
